@@ -1,2 +1,3 @@
-# clash-config-
-防止dns泄露
+# ACL4SSP
+防止dns泄露，自用
+
