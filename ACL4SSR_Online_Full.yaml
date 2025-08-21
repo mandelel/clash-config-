@@ -4,10 +4,13 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
       - 🇺🇲 美国节点
+      - 🇺🇲 手动美国
       - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
@@ -26,11 +29,15 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
+      - 🇺🇲 手动美国
       - 🇺🇲 美国节点
       - 🇰🇷 韩国节点
       - 🚀 手动切换
+      - 下载专用
       - DIRECT
   - name: 💬 OpenAi
     type: select
@@ -39,9 +46,12 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
       - 🇺🇲 美国节点
+      - 🇺🇲 手动美国
       - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
@@ -52,11 +62,21 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇸🇬 狮城节点
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
       - 🇺🇲 美国节点
+      - 🇺🇲 手动美国
       - 🇰🇷 韩国节点
       - 🚀 手动切换
+      - DIRECT
+   - name: 🎯 PikPak专线
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - 下载专用
       - DIRECT
   - name: 🎥 奈飞视频
     type: select
@@ -91,10 +111,13 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
       - 🇺🇲 美国节点
+      - 🇺🇲 手动美国
       - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
@@ -113,10 +136,13 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
+      - 🇺🇲 手动美国
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
       - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: Ⓜ️ 微软Bing
@@ -178,6 +204,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇰🇷 韩国节点
+      - 下载专用
       - 🚀 手动切换
   - name: 🎶 网易音乐
     type: select
@@ -210,12 +237,27 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇭🇰 香港节点
+      - 🇭🇰 手动香港
       - 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
+      - 🇯🇵 手动日本
       - 🇺🇲 美国节点
+      - 🇺🇲 手动美国
       - 🇰🇷 韩国节点
       - 🚀 手动切换
+  - name: 🇭🇰 手动香港
+    include-all: true
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    type: select
+  - name: 🇯🇵 手动日本
+    include-all: true
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: select
+  - name: 🇺🇲 手动美国
+    include-all: true
+    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: select
   - name: 🇭🇰 香港节点
     include-all: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
@@ -224,7 +266,7 @@ proxy-groups:
     tolerance: 50
   - name: 🇯🇵 日本节点
     include-all: true
-    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    filter: (?i)^(?!.*免费|下载).*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
     type: url-test
     interval: 300
     tolerance: 50
@@ -256,6 +298,12 @@ proxy-groups:
     include-all: true
     filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|Media
     type: select
+  - name: 下载专用
+    include-all: true
+    filter: (?i)下载
+    type: url-test
+    interval: 300
+    tolerance: 50
 
 rule-providers:
   LocalAreaNetwork:
@@ -500,5 +548,7 @@ rules:
   - "RULE-SET,ChinaDomain,🎯 全球直连"
   - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
   - "RULE-SET,Download,🎯 全球直连"
+  - DOMAIN-SUFFIX,mypikpak.com,🎯 PikPak专线
+  - DOMAIN-SUFFIX,pikpak.me,🎯 PikPak专线
   - "GEOIP,CN,🎯 全球直连"
   - "MATCH,🐟 漏网之鱼"
