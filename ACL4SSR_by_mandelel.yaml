@@ -22,6 +22,7 @@ proxy-groups:
     include-all: true
     interval: 300
     tolerance: 50
+    filter: (?i)^(?!.*(免费|下载)).*
   - name: 📲 电报消息
     type: select
     proxies:
